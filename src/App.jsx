@@ -4,7 +4,8 @@ function App() {
   const [tasks, setTasks] = useState([
     { id: 1, title: 'Edzés 💪', completed: false },
     { id: 2, title: 'Programozás 💻', completed: false },
-    { id: 3, title: 'Olvasás 📖', completed: false }
+    { id: 3, title: 'Olvasás 📖', completed: false },
+    { id: 4, title: 'Fogmosás 🛁', completed: false }
   ]);
 
   function toggleTask(id) {
