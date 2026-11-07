@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css';
 
 function App() {  
   const [tasks, setTasks] = useState([
@@ -23,14 +24,15 @@ function App() {
 
       <h2>Mai küldetéseim</h2>
 
-      <ul>
+      <ul className="task-grid">
         {tasks.map(task => (
-          <li key={task.id}>
+          <li key={task.id} className="task-card">
             {task.title}
 
-            <button onClick={() => toggleTask(task.id)}>
+            <button className={`quest-button ${task.completed ? 'completed' : ''}`} onClick={() => toggleTask(task.id)}>
               {task.completed ? '✅ Kész!' : 'Teljesítés'}
             </button>
+            
           </li>
         ))}
       </ul>
